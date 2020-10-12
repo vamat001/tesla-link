@@ -245,7 +245,6 @@ class TeslaApi:
     # print(t.wake())
     # print(t.get_addr())
     # print(t.get_range())
-    # print(t.charge_start())
     # print(t.get_charging_status())
     # print(t.get_odo())
     # print(t.door_lock())
