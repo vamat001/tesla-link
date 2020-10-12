@@ -2,3 +2,4 @@
 static/secrets.txt
 venv
 /.gcloudignore
+__pycache__

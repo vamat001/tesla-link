@@ -239,11 +239,11 @@ class TeslaApi:
             return self.queries[query]()
 
 
-if __name__ == '__main__':
-    t = TeslaApi()
-    t.auth()
-    print(t.wake())
-    print(t.get_addr())
+# if __name__ == '__main__':
+    # t = TeslaApi()
+    # t.auth()
+    # print(t.wake())
+    # print(t.get_addr())
     # print(t.get_range())
     # print(t.charge_start())
     # print(t.get_charging_status())
@@ -253,6 +253,4 @@ if __name__ == '__main__':
     # print(t.get_climate_setting())
     # print(t.get_internal_temp())
     # print(t.stop_hvac())
-    t.revoke_auth()
-    # result = requests.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCIGEJxMXBTHzlQOx4aVG7pfhMx2-OsvgI').json()
-    # print(result['results'][0]['address_components'])
+    # t.revoke_auth()
