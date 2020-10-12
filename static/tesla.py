@@ -96,6 +96,7 @@ class TeslaApi:
         return speech
 
     def get_addr(self):
+        start = time.time()
         drive_state = self.state('drive_state')
         maps = googlemaps.Client(key=self.api_key)
         res = maps.reverse_geocode((drive_state['latitude'], drive_state['longitude']))[0]
@@ -123,6 +124,7 @@ class TeslaApi:
         addr = ""
         for i in range(x, 3):
             addr += res['address_components'][i]['long_name'] + ' '
+        print(time.time() - start)
         return prefix + addr
 
     def get_range(self):
@@ -237,11 +239,11 @@ class TeslaApi:
             return self.queries[query]()
 
 
-# if __name__ == '__main__':
-    # t = TeslaApi()
-    # t.auth()
-    # print(t.wake())
-    # print(t.get_addr())
+if __name__ == '__main__':
+    t = TeslaApi()
+    t.auth()
+    print(t.wake())
+    print(t.get_addr())
     # print(t.get_range())
     # print(t.charge_start())
     # print(t.get_charging_status())
@@ -251,4 +253,6 @@ class TeslaApi:
     # print(t.get_climate_setting())
     # print(t.get_internal_temp())
     # print(t.stop_hvac())
-    # t.revoke_auth()
+    t.revoke_auth()
+    # result = requests.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCIGEJxMXBTHzlQOx4aVG7pfhMx2-OsvgI').json()
+    # print(result['results'][0]['address_components'])

@@ -1,3 +1,4 @@
 *.idea
-secrets.txt
+static/secrets.txt
 venv
+/.gcloudignore

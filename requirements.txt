@@ -1,4 +1,3 @@
 googlemaps==4.4.2
 requests==2.24.0
-web.py==0.61
-pyngrok==4.1.12
+Flask==1.1.2
