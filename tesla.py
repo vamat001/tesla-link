@@ -1,17 +1,17 @@
 import googlemaps
 import time
 import requests
+import secrets
 
 
 class TeslaApi:
     def __init__(self, access_token="", id=""):
-        with open("secrets.txt", "r") as f:
-            lines = f.read().splitlines()
-        self.email = lines[0]
-        self.pw = lines[1]
-        self.api_key = lines[2]
-        self.client_id = lines[3]
-        self.client_secret = lines[4]
+        lst = secrets.data
+        self.email = lst[0]
+        self.pw = lst[1]
+        self.api_key = lst[2]
+        self.client_id = lst[3]
+        self.client_secret = lst[4]
         self.base_url = "https://owner-api.teslamotors.com"
         self.access_token = access_token
         self.refresh_token = ""

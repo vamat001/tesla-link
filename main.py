@@ -1,6 +1,6 @@
 from flask import Flask, request, abort, Response
 # import web
-from static.tesla import TeslaApi
+from tesla import TeslaApi
 import json
 
 # urls = (

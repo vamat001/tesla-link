@@ -1,5 +1,5 @@
 *.idea
-static/secrets.txt
 venv
 /.gcloudignore
 __pycache__
+/secrets.py
